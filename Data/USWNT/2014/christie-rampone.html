@@ -1,0 +1,1080 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a7d8c26b86","applicationID":"3303157","transactionName":"YVZVZEoDDREEAUBbVlgcemZ7TTALEQdXXUtTcFheTBAMDgkHRh1wWFdSSA==","queueTime":0,"applicationTime":192,"ttGuid":"DCCE35640A25394E","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgQPUlBUGwADVFJTAgY="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noodp">
+    
+
+
+<title>Christie Rampone - USWNT - U.S. Soccer</title>
+<meta name="description" content="Christie Rampone was named to the 2015 U.S. FIFA Women&#39;s World Cup roster, her fifth World Cup selection (1999, 2003, 2007, 2011, 2015). The only active player remaining from the 1999 FIFA Women&#39;s World Cup championship team. Named captain of the U.S. Women’s National Team in 2008. ">
+<meta name="keywords" content="Christie Rampone, Christie Rampone soccer, Christie Pearce, Christie Pearce soccer, USWNT, U.S. WNT, WNT, USA, 2015 U.S. FIFA Women&#39;s World Cup roster, 1999 FIFA Women&#39;s World Cup, Chris Rampone, Chris Rampone&#39;s wife">
+
+<meta property="og:title" content="Christie Rampone - USWNT"/>
+<meta property="og:url" content="/players/r/christie-rampone"/>
+<meta property="og:description" content="Christie Rampone was named to the 2015 U.S. FIFA Women&#39;s World Cup roster, her fifth World Cup selection (1999, 2003, 2007, 2011, 2015). The only active player remaining from the 1999 FIFA Women&#39;s World Cup championship team. Named captain of the U.S. Women’s National Team in 2008. "/>
+<meta property="og:image" content=""/>
+<meta property="fb:pages" content="32421823940" />
+
+
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ussoccer">
+<meta name="twitter:title" content="Christie Rampone - USWNT">
+<meta name="twitter:description" content="Christie Rampone was named to the 2015 U.S. FIFA Women&#39;s World Cup roster, her fifth World Cup selection (1999, 2003, 2007, 2011, 2015). The only active player remaining from the 1999 FIFA Women&#39;s World Cup championship team. Named captain of the U.S. Women’s National Team in 2008. ">
+        <meta name="twitter:creator" content="@ussoccer">
+    <meta name="twitter:image" content="http://www.ussoccer.com/~/media/images/wnt/players/rampone/_0009_christie_rampone.jpg">
+
+    
+<meta name="VIcurrentDateTime" content="636836210109302830" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+    
+    <link href="/Content/css/fonts?v=BahXvppo749C8oiPzEVPMdsRPsPCWY-DG7RRWmKOavI1" type="text/css" rel="stylesheet" async />
+
+    <link href="/Content/css/bundle?v=z_N79XV_DxjYdUNIbzwKPO1E-5kp1Zr7OTVyMmBdTlM1" type="text/css" rel="stylesheet" async />
+
+
+    <script type="text/javascript">
+        var gaAccountId = "UA-49072922-1", gaDomain = "ussoccer.com";
+        !function() {
+            var a = document.createElement("script");
+            a.async = !0, a.type = "text/javascript";
+            var b = "https:" == document.location.protocol;
+            a.src = (b ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(a, c)
+        }();//, function (a, b, c, d, e, f, g) { a.GoogleAnalyticsObject = e, a[e] = a[e] || function () { (a[e].q = a[e].q || []).push(arguments) }, a[e].l = 1 * new Date, f = b.createElement(c), g = b.getElementsByTagName(c)[0], f.async = 1, f.src = d, g.parentNode.insertBefore(f, g) }(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", gaAccountId, gaDomain), ga("require", "displayfeatures"), ga("send", "pageview"), window.twttr = function (a, b, c) { var d, e, f = a.getElementsByTagName(b)[0]; if (!a.getElementById(c)) return e = a.createElement(b), e.id = c, e.async = !0, e.src = "https://platform.twitter.com/widgets.js", f.parentNode.insertBefore(e, f), window.twttr || (d = { _e: [], ready: function (a) { d._e.push(a) } }) }(document, "script", "twitter-wjs"); var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "6036539", cs_ucfr: "1" }), function () { var a = document.createElement("script"), b = document.getElementsByTagName("script")[0]; a.async = !0, a.src = ("https:" == document.location.protocol ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js", b.parentNode.insertBefore(a, b) }();
+    </script>
+
+<!-- Begin comScore Tag -->
+
+<script>
+
+  var _comscore = _comscore || [];
+
+  _comscore.push({ c1: "2", c2: "6036539", cs_ucfr: "1" });
+
+  (function()
+
+{     var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;     s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";     el.parentNode.insertBefore(s, el);   }
+)();
+
+</script>
+
+<noscript>
+
+  <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6036539&cs_ucfr=1&cv=2.0&cj=1" />
+
+</noscript>
+
+<!-- End comScore Tag -->
+
+
+   
+    <link rel="stylesheet" href="/Content/css/v3.football.opta-widgets.css">
+    <script src="/Content/js/modernizr.min.js"></script>
+    <script src="https://secure.widget.cloud.opta.net/v3/v3.opta-widgets.js"></script>
+
+    
+    
+
+</head>
+
+<body class=" ">
+    <script>
+    
+    var versaTag={};versaTag.id="250",versaTag.sync=1,versaTag.dispType="js",versaTag.ptcl="",versaTag.bsUrl="bs.serving-sys.com/BurstingPipe",versaTag.activityParams={},versaTag.retargetParams={},versaTag.conditionalParams={};
+</script>
+<script id="ebOneTagUrlId" src="//ds.serving-sys.com/SemiCachedScripts/ebOneTag.js"></script>
+<noscript>
+    <iframe src="//bs.serving-sys.com/BurstingPipe?cn=ot&amp;onetagid=250&amp;ns=1&amp;activityValues=$$Value=[Revenue]&amp;OrderID=[OrderID]&amp;ProductID=[ProductID]&amp;ProductInfo=[ProductInfo]&amp;Quantity=[Quantity]$$" style="display:none;width:0px;height:0px"></iframe>
+</noscript>
+
+
+    <script>
+    // UDO
+    var utag_data = {};
+        utag_data["page_name"] = "christie rampone - uswnt";
+        utag_data["page_topic"] = "wnt";
+        utag_data["page_type"] = "player page";
+        utag_data["site_section"] = "players";
+
+    // UTag
+    (function (a, b, c, d) {
+        a = '//tags.tiqcdn.com/utag/ussoccer/main/prod/utag.js';
+        b = document; c = 'script'; d = b.createElement(c); d.src = a;
+        d.type = 'text/java' + c; d.async = true;
+        a = b.getElementsByTagName(c)[0];
+        a.parentNode.insertBefore(d, a);
+    })();
+</script>
+
+    <div id="crest-bar">
+        <div class="row">
+            <a id="brand" href="/" title="U.S. Soccer - Home">
+            <div id="crest"><img src="/~/media/images/sponsors/vw/ussf-sponsors-lockup-vw_mnt_small.png"/>
+            </div>
+            <div id="logotype"></div>
+</a>
+<div id="search-wrap">
+    <a href="#" id="mobile-search-toggle"></a>
+    <form id="search-form" action="/search" method="get">
+        <button class="search-button icon-search" type="submit">Search</button>
+        <input class="search-box" type="text" placeholder="Search..." name="q"/>
+    </form>
+</div>
+<div id="utility">
+    <ul>
+            <li class="has-dropdown">
+                <a href="#">
+                    Membership
+                    <span class="icon-down"></span>
+                </a>
+                <ul class="dropdown no-bullet" style="display: none;">
+                        <li><a href="https://membership.ussoccer.com/purchase-us-soccer-membership/us-soccer-membership">Join Now</a></li>
+                        <li><a href="http://membership.ussoccer.com">About Membership</a></li>
+                </ul>
+            </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+
+    <nav class="top-bar">
+        <div id="nav-bar">
+            <div class="row">
+                <div id="team-nav">
+    <a href="">All Teams <span class="icon-down"></span></a>
+</div>
+
+<div id="main-nav">
+    <ul class="loading">
+
+                    <li class="nav-anchored has-dropdown">
+                        <a href="https://store.ussoccer.com/" class="nav-item-center"><span class="align">Store</span> <span class="icon-down"></span></a>
+                            <ul class="dropdown">
+                                    <li><a href="https://store.ussoccer.com/">Store Home</a></li>
+                                    <li><a href="https://store.ussoccer.com/collections/new-arrivals">New Arrivals</a></li>
+                                    <li><a href="https://store.ussoccer.com/collections/men-jerseys">Men&#39;s Jerseys</a></li>
+                                    <li><a href="https://store.ussoccer.com/collections/womens-jerseys">Women&#39;s Jerseys</a></li>
+                                    <li><a href="https://store.ussoccer.com/collections/youth-jerseys">Youth Jerseys</a></li>
+                                    <li><a href="https://store.ussoccer.com/collections/accessories">Accessories</a></li>
+                            </ul>
+                    </li>
+        <li class="nav-more has-dropdown">
+            <a href="#"><span class="align">More</span> <span class="icon-down"></span></a>
+            <ul class="dropdown">
+                        <li class="">
+                            <a href="/"><span class="nav-item-center">Stories</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/schedule-tickets"><span class="nav-item-center">Schedule &amp; Tickets</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/results-statistics"><span class="nav-item-center">Results</span></a>
+                        </li>
+                        <li class="">
+                            <a href="https://ussfwwc2019.squarespace.com/"><span class="nav-item-center">2019 World Cup</span></a>
+                        </li>
+                        <li class="">
+                            <a href="http://www.ussoccerda.com/"><span class="nav-item-center">Academy</span></a>
+                        </li>
+                        <li class="">
+                            <a href="http://developmentfund.ussoccer.com/"><span class="nav-item-center">Development Fund</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/lamar-hunt-us-open-cup"><span class="nav-item-center">U.S. Open Cup</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/about/affiliates"><span class="nav-item-center">Affiliate Members</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/coaching-education"><span class="nav-item-center">Coaching Education</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/referees"><span class="nav-item-center">Referee Program</span></a>
+                        </li>
+                        <li class="">
+                            <a href="https://www.safesoccer.com/"><span class="nav-item-center">Safe Soccer</span></a>
+                        </li>
+                        <li class="">
+                            <a href="http://www.recognizetorecover.org/#us-soccers-comprehensive-player-health-and-safety-program"><span class="nav-item-center">Recognize to Recover</span></a>
+                        </li>
+                        <li class="">
+                            <a href="/espanol/noticias"><span class="nav-item-center">En Espa&#241;ol</span></a>
+                        </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="mega-menu">
+        <div id="mega-menu-wrap">
+            <div class="row">
+                    <div class="mega-menu-column">
+        <div class="menu-header">Men&#39;s</div>
+        <div class="mega-list-wrap">
+            <ul class="mega-list">
+                <li><a href="/mens-national-team">MNT</a></li>
+                <li><a href="/us-under23-mens-national-team">U-23 MNT</a></li>
+                <li><a href="/us-under20-mens-national-team">U-20 MNT</a></li>
+                <li><a href="/us-under19-mens-national-team">U-19 MNT</a></li>
+                <li><a href="/us-under18-mens-national-team">U-18 MNT</a></li>
+                <li><a href="/us-under17-mens-national-team">U-17 MNT</a></li>
+                <li><a href="/us-under16-boys-national-team">U-16 BNT</a></li>
+                <li><a href="/us-under15-boys-national-team">U-15 BNT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mega-menu-column">
+        <div class="menu-header">Women&#39;s</div>
+        <div class="mega-list-wrap">
+            <ul class="mega-list">
+                <li><a href="/womens-national-team">WNT</a></li>
+                <li><a href="/us-under23-womens-national-team">U-23 WNT</a></li>
+                <li><a href="/us-under20-womens-national-team">U-20 WNT</a></li>
+                <li><a href="/us-under19-womens-national-team">U-19 WNT</a></li>
+                <li><a href="/us-under18-womens-national-team">U-18 WNT</a></li>
+                <li><a href="/us-under17-womens-national-team">U-17 WNT</a></li>
+                <li><a href="/us-under16-girls-national-team">U-16 GNT</a></li>
+                <li><a href="/us-under15-girls-national-team">U-15 GNT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mega-menu-column">
+        <div class="menu-header">More Teams</div>
+        <div class="mega-list-wrap">
+            <ul class="mega-list">
+                <li><a href="/us-under14-national-development-program">U-14 NDP</a></li>
+                <li><a href="/beach-soccer-national-team">Beach Soccer</a></li>
+                <li><a href="/futsal-national-team">Futsal</a></li>
+                <li><a href="/paralympic-national-team">Paralympic Soccer</a></li>
+            </ul>
+        </div>
+    </div>
+<div class="mega-menu-column last">
+    <ul class="menu-callout">
+        <li><a href="/">View all teams</a></li>
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div id="team-menu-off-canvas-wrap" class="off-canvas-wrap">
+        <a href="#" id="nav-close"></a>
+        <div id="main-container" class="inner-wrap">
+
+            <div id="content-wrap" class="">
+
+
+<div class="text-center ad-header-banner">
+    <div id="ad-global-d30d3a8c30364a299ebc800971e8c912" class="ad-banner-container">
+            <script type="text/javascript">
+                var googletag = window.googletag || { cmd: [] };
+                googletag.cmd.push(function () {
+                    var mapping = googletag.sizeMapping()
+                        .addSize([0, 0], [[300, 50], [300, 100], [320, 50]])
+                        .addSize([750, 300], [728, 90])
+                        .addSize([1000, 400], [[728, 90], [924, 56], [970, 90], [970, 250]])
+                    .build();
+
+                    googletag.defineSlot("/8375/www.ussoccer.com/players/r/christie-rampone", [728, 90], "ad-global-d30d3a8c30364a299ebc800971e8c912")
+                        .defineSizeMapping(mapping)
+                        .addService(googletag.pubads())
+
+                    .setTargeting("Teams", ["Womens National Team"])
+                                    .setTargeting("Players", ["Christie Rampone"])
+                                                    ;
+
+                    googletag.enableServices();
+                });
+
+                googletag.cmd.push(function () {
+                    googletag.display("ad-global-d30d3a8c30364a299ebc800971e8c912");
+                });
+            </script>
+            <div style="display:none;">0</div>
+    </div>
+</div>
+    
+
+    <!-- Player Bio -->
+    <div id="player-info" itemscope itemtype="https://schema.org/Person">
+        <div class="row collapse">
+            <div class="player-overview columns large-8 small-12">
+                <div class="bio-img">
+                            <img itemprop="image" alt="Christie Rampone" src="/~/media/images/wnt/players/rampone/_0009_christie_rampone.jpg?w=400" />
+                </div>
+                <div class="bio-overview">
+                    <div class="achievements">
+
+                    </div>
+                    <div itemprop="affiliation" itemscope itemtype="https://schema.org/Organization" class="team">
+                        <span itemprop="name">Women&#39;s National Team</span>
+                    </div>
+                    <h1 class="name"><span itemprop="givenName">Christie</span> <span itemprop="familyName">Rampone</span></h1>
+
+                    <div class="bio-team-stats">
+                            <span class="bio-position">Defender</span>
+                                                    <span class="bio-stats">
+                                <span class="bio-stat-label">Caps/Goals - </span>
+                                <span class="bio-stat-value">311/4</span>
+                            </span>
+                    </div>
+                </div>
+                    <div class="bio-social social-icons">
+                        <span class="bio-social-text">Follow me!</span>
+                                                    <a href="http://www.twitter.com/ChristieRampone" target="_blank" class="icon-twitter">Twitter</a>
+                                                    <a href="http://www.instagram.com/christierampone3" target="_blank" class="icon-instagram">Instagram</a>
+                    </div>
+            </div>
+            <div class="player-details columns large-4 small-12">
+                <ul class="clearfix">
+                        <li>
+                            <h4>Date of Birth</h4>
+                            <p><time itemprop="birthdate" datetime="1975-06-24T00:00:00Z">June 24, 1975</time></p>
+                        </li>
+                                            <li>
+                            <h4>
+                                Height
+                            </h4>
+                            <p itemprop="height" itemscope itemtype="https://schema.org/QuantitativeValue">
+                                <span itemprop="value">5-6</span>
+                            </p>
+                        </li>
+                                            <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                            <h4>Hometown</h4>
+                            <p itemprop="address">Point Pleasant, N.J.</p>
+                        </li>
+                                            <li itemprop="affiliation" itemscope itemtype="https://schema.org/Organization">
+                            <h4>Club</h4>
+                            <p itemprop="name">Sky Blue FC</p>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Player Bio -->
+
+    <div class="row mobile-flex">
+
+        <div id="main-tabs">
+            <dl class="tabs" data-tab="">
+                        <dd class=""><a href="#tab-1">MEET CHRISTIE</a></dd>
+
+                        <dd class=""><a href="#tab-2">National Teams</a></dd>
+
+                        <dd class=""><a href="#tab-3">Professional</a></dd>
+
+            </dl>
+        </div>
+
+        <div id="sidebar-second" data-fixed-outer>
+
+            <div class="inner" data-fixed-inner="">
+
+                <div class="sidebar-pod">
+                    
+                </div>
+                
+                <div style="display:none;">
+    5
+</div>
+
+    <div class="sidebar-pod">
+        <h2>Related Items</h2>
+            <div class="teaser-list">
+                <ul>
+                        <li>
+                                <a href="http://www.ussoccer.com/stories/2018/01/26/15/27/20180126-news-seven-person-panel-of-former-wnt-players-to-select-shebelieves-hero-finalists" class="list-image" style="background-image: url('/~/media/images/wnt/shebelieves/shebelieves-3star-800x407.png?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="http://www.ussoccer.com/stories/2018/01/26/15/27/20180126-news-seven-person-panel-of-former-wnt-players-to-select-shebelieves-hero-finalists">Seven-Person Panel of Former WNT Players to Select SheBelieves Hero Finalists</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Jan 26 2018</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="http://www.ussoccer.com/stories/2017/03/04/21/16/20170304-recap-wnt-falls-to-england-1-0-in-front-of-sell-out-crowd-in-new-jersey" class="list-image" style="background-image: url('/~/media/images/wnt/gallery-images/2017/03/20170304-wnt-v-eng/20170304-wntveng-lavelle.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="http://www.ussoccer.com/stories/2017/03/04/21/16/20170304-recap-wnt-falls-to-england-1-0-in-front-of-sell-out-crowd-in-new-jersey">U.S. WNT Falls to England 1-0 in Front of Sellout Crowd in New Jersey</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Mar 05 2017</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="http://www.ussoccer.com/stories/2017/03/05/00/00/20170303-video-wnt-a-tribute-to-christie-rampone" class="list-image" style="background-image: url('https://cf.c.ooyala.com/t2ZDk1YTE6XntiETK-2JIhcK1sqzuNyX/promo312832227?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="http://www.ussoccer.com/stories/2017/03/05/00/00/20170303-video-wnt-a-tribute-to-christie-rampone">A Tribute to Christie Rampone</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Mar 05 2017</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="https://www.ussoccer.com/stories/2017/03/03/16/03/20170303-feat-wnt-rampone-career-by-the-numbers" class="list-image" style="background-image: url('/~/media/images/wnt/players/rampone/rampone-retires-gallery/20170213-rampone-retires-30.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="https://www.ussoccer.com/stories/2017/03/03/16/03/20170303-feat-wnt-rampone-career-by-the-numbers">Breaking Down Christie Rampone’s Career</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Mar 03 2017</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="http://www.ussoccer.com/stories/2017/02/13/20/07/20170213-wnt-gallery-christie-rampone-through-the-years" class="list-image" style="background-image: url('/~/media/images/wnt/players/rampone/rampone-retires-gallery/20170213-rampone-retires-4.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="http://www.ussoccer.com/stories/2017/02/13/20/07/20170213-wnt-gallery-christie-rampone-through-the-years">GALLERY: Christie Rampone Through the Years</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Feb 13 2017</span>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+            </div>
+
+
+
+
+
+<!-- OneByOneAd Begin -->
+<div id="ad-4ac910e5-f624-4fa1-8e4a-ba0913e3827d" class="pod-1x1 text-center ad-1x1 aggregate-item">
+        <div style="display:none;"></div>
+        <script type="text/javascript">
+            var googletag = window.googletag || { cmd: [] };
+            googletag.cmd.push(function () {
+                var mapping = googletag.sizeMapping()
+                    .addSize([0, 0], [300, 250])
+                .build();
+
+                googletag.defineSlot("/8375/www.ussoccer.com/players/r/christie-rampone", [300, 250], "ad-4ac910e5-f624-4fa1-8e4a-ba0913e3827d")
+                    .defineSizeMapping(mapping)
+                    .addService(googletag.pubads())
+                .setTargeting("Teams", ["Womens National Team"])
+                            .setTargeting("Players", ["Christie Rampone"])
+                        
+
+;
+
+                googletag.enableServices();
+            });
+
+            googletag.cmd.push(function () {
+                googletag.display("ad-4ac910e5-f624-4fa1-8e4a-ba0913e3827d");
+            });
+        </script>
+</div>
+<!-- OneByOneAd End -->
+
+<div style="display:none;">
+    5
+</div>
+
+    <div class="sidebar-pod">
+        <h2>Trending Stories</h2>
+            <div class="teaser-list">
+                <ul>
+                        <li>
+                                <a href="https://www.ussoccer.com/stories/2019/01/17/21/26/20190117-ynt-u14-tid-new-talent-identification-scouting-program-regional-mini-camps" class="list-image" style="background-image: url('/~/media/images/u14-bnt/161115-u14-camp-4.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="https://www.ussoccer.com/stories/2019/01/17/21/26/20190117-ynt-u14-tid-new-talent-identification-scouting-program-regional-mini-camps">U.S. Soccer Launches New YNT U-14 Talent Identification Program</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label blue-border">U-15 BNT</span>
+                                            <span class="team-label">U-14 NDP</span>
+                                            <span class="team-label">ACADEMY</span>
+                                                                            <span class="time-stamp">Jan 17 2019</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="https://www.ussoccer.com/stories/2019/01/10/17/43/20190110-feat-mnt-january-camp-importance-learning-new-coach-gregg-berhalter" class="list-image" style="background-image: url('/~/media/images/mnt/players/ramirez-christian/20190108-mnt-training-christian-ramirez.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="https://www.ussoccer.com/stories/2019/01/10/17/43/20190110-feat-mnt-january-camp-importance-learning-new-coach-gregg-berhalter">New Beginning, Same Opportunity for MNT Players in January Camp</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label blue">MNT</span>
+                                                                            <span class="time-stamp">Jan 10 2019</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="https://www.ussoccer.com/stories/2019/01/07/18/03/20190107-news-wnt-midfielder-andi-sullivan-added-to-roster-for-january-training-camp" class="list-image" style="background-image: url('/~/media/images/wnt/gallery-images/2017/11/20171105-wnt-midfielders-gallery/20171105-wnt-midfielders-gallery-sullivan-2.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="https://www.ussoccer.com/stories/2019/01/07/18/03/20190107-news-wnt-midfielder-andi-sullivan-added-to-roster-for-january-training-camp">Andi Sullivan Added to WNT Roster for 2019 January Training Camp</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Jan 07 2019</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="https://www.ussoccer.com/stories/2019/01/04/15/26/20190104-feat-wnt-five-things-to-know-about-the-wnts-2019-january-camp" class="list-image" style="background-image: url('/~/media/images/wnt/gallery-images/2018/11/20181113-wnt-v-sco/20181113-wnt-v-sco-alex-morgan-goal-pugh.jpg?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="https://www.ussoccer.com/stories/2019/01/04/15/26/20190104-feat-wnt-five-things-to-know-about-the-wnts-2019-january-camp">Five Things to Know about the WNT 2019 January Camp</a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Jan 04 2019</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <a href="https://www.ussoccer.com/stories/2019/01/04/15/07/20190104-news-ellis-names-26-players-for-uswnt-january-camp-in-europe" class="list-image" style="background-image: url('/~/media/images/wnt/social/2019-january-wnt-rosterrelease.png?h=85')"></a>
+                            <div class="list-text">
+                                <h2>
+                                    <a href="https://www.ussoccer.com/stories/2019/01/04/15/07/20190104-news-ellis-names-26-players-for-uswnt-january-camp-in-europe">26 Players Comprise WNT Roster for January Camp and Matches in Europe </a>
+                                </h2>
+                                <div class="list-info">
+                                            <span class="team-label red">WNT</span>
+                                                                            <span class="time-stamp">Jan 04 2019</span>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+            </div>
+
+
+                    <div class="sidebar-pod">
+                        <h2>Photos</h2>
+                        <div class="photo-grid">
+                                <div class="photo" style="background-image: url('~/media/images/wnt/players/rampone/rampone and family.jpg?w=300')"></div>
+                                <div class="photo" style="background-image: url('~/media/images/wnt/players/rampone/rampone tbt.jpg?w=300')"></div>
+                                <div class="photo" style="background-image: url('~/media/images/wnt/players/rampone/rampone and daughters.jpg?w=300')"></div>
+
+                            <div class="media-gallery-container clearfix">
+
+                                <a href="" class="open-link media-gallery">MORE PHOTOS +</a>
+                                <ul class="clearing-thumbs clearing-feature" data-clearing>
+                                        <li>
+                                            <a href="~/media/images/wnt/players/rampone/rampone and family.jpg" style="background-image:url('~/media/images/wnt/players/rampone/rampone and family.jpg?h=80');">
+                                                <img data-header="" data-caption="" src="~/media/images/wnt/players/rampone/rampone and family.jpg?h=80" itemprop="image" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="~/media/images/wnt/players/rampone/rampone tbt.jpg" style="background-image:url('~/media/images/wnt/players/rampone/rampone tbt.jpg?h=80');">
+                                                <img data-header="" data-caption="" src="~/media/images/wnt/players/rampone/rampone tbt.jpg?h=80" itemprop="image" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="~/media/images/wnt/players/rampone/rampone and daughters.jpg" style="background-image:url('~/media/images/wnt/players/rampone/rampone and daughters.jpg?h=80');">
+                                                <img data-header="" data-caption="" src="~/media/images/wnt/players/rampone/rampone and daughters.jpg?h=80" itemprop="image" />
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div id="main-column">
+<div id="social-left" class="hide-for-small-only hide-on-overlay" data-fixed-outer="">
+    <!-- AddThis Button BEGIN -->
+    <ul class="social-list addthis_toolbox" data-fixed-inner="">
+        <li class="social-list-item"><a class="icon icon-facebook addthis_button_facebook"></a></li>
+        <li class="social-list-item"><a class="icon icon-twitter addthis_button_twitter"></a></li>
+    </ul>
+    <!-- AddThis Button END -->
+</div>
+
+            <div id="main-column-container" class="content">
+                <div class="tabs-content">
+                    <div class="content active" id="tab-1">
+                        <div class="section">
+                            <p><strong>SHY</strong></p>
+<p>Christie was shy; luckily, her sister Wendy was not. The two played together on the same high school soccer and basketball teams, and when reporters would come to talk to the team post-game, Wendy fielded the questions while Christy took off to hide on the bus. &ldquo;When I did talk to them, I just said, &lsquo;Mmm, yes,&rsquo; one word answers, and figured they&rsquo;d stop asking me,&rdquo; says Rampone. &ldquo;I thought I expressed myself on the field. I didn&rsquo;t know how to express myself verbally.&rdquo; </p>
+<p>Rampone (n&eacute;e Christie Pearce) stayed close to home for college, playing both basketball and soccer at Monmouth University, where her sister went to school. Rampone&rsquo;s senior year soccer season had just ended, and she was on the bus to an away basketball game when her coach handed her a fax &ndash; an invite to the Women&rsquo;s National Team. </p>
+<p>Her shyness reached a whole new level when she arrived at her first camp, &ldquo;Here I am with these people I&rsquo;d only seen in commercials and in highlights,&rdquo; says Rampone. She barely spoke. &ldquo;It took me months before I could even say &lsquo;Hi.&rsquo;&rdquo;</p>
+<p><img height="1024" alt="Christie Rampone" width="748" src="/~/media/images/wnt/players/rampone/rampone-tbt.jpg?la=en" /></p>
+<p><strong>THE QUIET LEADER</strong></p>
+<p>When Pia Sundhage told Rampone that she had what it took to be the captain, her initial reaction was, &lsquo;Me?!&rsquo;<em> </em>But then she took some time to digest it and decided she liked the challenge of leadership.&nbsp; </p>
+<p>Somewhat ironically, shyness has helped her be a better captain. &ldquo;My personality is one that I listen, take it in, before I deliver,&rdquo; says Rampone. &ldquo;I&rsquo;m not the one who&rsquo;s going to blurt out what I think. And I got the chance to listen to Julie [Foudy], and Carla [Overbeck], to see them as captains and learn from them.<strong> </strong>That process &ndash; you watch, you observe. You learn about timing, approach and tone; knowing who you are talking to. Some people you can approach when you&rsquo;re angry, some you can&rsquo;t; you have to know the team.&rdquo;</p>
+<p><span style="text-decoration: underline;"></span></p>
+<p><strong>THE USWNT IMPACT</strong></p>
+<p><img height="1012" alt="Christie Rampone" width="660" src="/~/media/images/wnt/players/rampone/rampone-and-family.jpg?la=en" /></p>
+<p>Rampone brings along her two kids &ndash; Rylie and Reece &ndash;on road trips, &ldquo;They&rsquo;ve seen the world, they get to see different personalities, and they connect with different personalities. They know how go to the meal room, pick out their own food, say hi to everyone. They learn how to adjust to a team,&rdquo; says Rampone. &ldquo;I love seeing how independent and vocal they are. They&rsquo;re both so outgoing, whereas I was so shy, and I think this lifestyle has forced them to be more independent. I think Reece is naturally more like me, more shy, but she&rsquo;s starting to become more outgoing, better at four than at 21 like her mom.&rdquo;</p>
+<p><img height="612" alt="Christie Rampone" width="612" src="/~/media/images/wnt/players/rampone/rampone-and-daughters.jpg?la=en" /></p>
+<p><strong>Personal:<br />
+</strong>Full name is Christie Patricia Rampone (n&eacute;e Pearce) &hellip; Married Chris Rampone on Nov. 9, 2001, in Jersey City, N.J. &hellip; Has two daughters, Rylie who was born on Sept. 29, 2005, and Reece, who was born on March 6, 2010 &hellip; Graduated from Monmouth with a degree in special education and has her teaching credential ... Received an Honorary Doctorate from Monmouth in Public Services in May of 2005 &hellip; Also volunteered as a soccer coach and basketball coach at the middle school where she was student teaching ... Worked in classroom situations with communication-handicapped children ... A lifetime New Jersey resident, she moved to California for four years to train for the 2007 WWC and the 2008 Olympics but then moved back home for good &hellip; Has a red lab named Rooney who loves to play soccer, but chews all the soccer balls &hellip; Known as Captain America and the American&rsquo;s Ultimate Soccer Mom.</p>
+                            
+                        </div>
+                        <div class="section">
+                            <br />
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="content" id="tab-2">
+                        <div class="section">
+                            <p><strong></strong></p>
+<p>A high-scoring forward in college, she converted to defender for the USA when she made her debut in 1997 ... One of the most legendary players in women&rsquo;s soccer history, she served as captain of the U.S. Women&rsquo;s National Team from 2008-2015 and lifted the Women&rsquo;s World Cup Trophy with Abby Wambach on July 5, 2015 in Vancouver &hellip; Is one of two players from a small soccer school ever to make an impact on the National Team ... Formerly Christie Pearce, she switched the back of her jersey to her married name in 2004 &hellip; After the retirement of Kristine Lilly in 2010, she became the most capped player on the U.S. team and the only active player remaining from the 1999 FIFA Women&rsquo;s World Cup championship team &hellip; Currently the most capped active player in the world and during 2014, she became the second player in world history &ndash; joining Kristine Lilly &ndash; to reach 300 caps &hellip; Has played in nine world championships for the USA, the most of any player&nbsp; &hellip; Could pass 25,000 minutes played in a U.S. uniform in 2016 &hellip; <strong>2015:&nbsp;</strong>A member of the 2015 FIFA Women's World Cup champions, she played in two matches in Canada and provided one of the best moments of the tournament when she came into the World Cup Final in 86<sup>th</sup> minute and finished her World Cup career on the pitch ...&nbsp;The 2015 U.S. FIFA Women's World Cup roster was her fifth World Cup selection (1999, 2003, 2007, 2011, 2015) ... Became the oldest player to appear in a World Cup match when she entered the final group stage game against Nigeria on June 16 at 39 years, 11 months and 23 days ... Was hampered by injuries early in the year and played 300 minutes in seven matches, starting two &hellip; Saw her first action of 2015 coming in as a second half substitute during the USA's 5-1 against Mexico on May 17 in the second game of the Send-Off Series ... She suffered a back injury in January camp that sidelined her for the beginning of the year ... Added to the Algarve Cup roster on March 8 after teammate Whitney Engen suffered a hamstring injury during training in Portugal as the USA won its 10th Algarve Cup &hellip; <strong>2014:</strong> Played in 17 games, starting 14 and logged the fifth-most minutes on the team with 1,328 while captaining the team for the seventh year &hellip; Played every minute of four matches as she helped the USA qualify for the 2015 FIFA World Cup as the USA won the 2014 CONCACAF Women&rsquo;s Championship &hellip; &nbsp;Earned her historic 300th cap &ndash; becoming just the second player in world history to do so -- during a 3-0 semifinal victory against Mexico on Oct. 24 to help the team advance to the championship game and earn a berth to the Women&rsquo;s World Cup &hellip; <strong>2013:</strong> Played in 11 games, starting 10 &hellip; Had one assist to up her career total to 12 &hellip; <strong>2012:</strong> One of three U.S. players to play in all 32 matches, starting 31 &hellip; Has two assists during the year &hellip; Captained the USA to its third consecutive Olympic gold medal &hellip; Played in her fourth Olympics, most of any U.S. player &hellip; One of three U.S. players to play every minute of all six games at the Olympics &hellip; Also played every minute of all five games at the CONCACAF Olympic Qualifying tournament as the USA won the regional title in Vancouver, Canada &hellip; During 2012, she passed Julie Foudy and Mia Hamm to become the second most-capped player in U.S. and world history &hellip; <strong>2011:</strong> Once again anchored the U.S. back line from her center back position, starting all 18 games she played while finishing third on the team in minutes played with 1,590 &hellip; Played in her fourth Women&rsquo;s World Cup, joining just four other U.S. players to have accomplished that feat &hellip; She was the most capped player in the Women&rsquo;s World Cup and ended the year with 244 games played, good for fourth all-time in U.S. history &hellip; Started all six games in Germany and was one of four players to play every minute &hellip; The Women&rsquo;s World Cup was her seventh world championship for the USA &hellip; <strong>2010:</strong> Gave birth to her second child, Reece, on March 6 and played her first club match exactly three months later on June 6 &hellip; Made her return to the U.S. lineup July 17, coming off the bench against Sweden in East Hartford, Conn., and slotted back into the starting lineup after that &hellip; Played 10 total games for the USA, starting nine, including all five at the CONCACAF Women&rsquo;s World Cup Qualifying tournament, where she played every minute &hellip; Also played every minute of both legs of the Women&rsquo;s World Cup playoff against Italy &hellip;. <strong>2009:</strong> Played every minute of all five matches she started before taking a break at the end of the summer due to her pregnancy &hellip; <strong>2008:</strong> Earned her 200th cap against New Zealand in the final first-round match at the 2008 Olympics, becoming the sixth U.S. player to hit the 200-cap mark &hellip; Had a stellar year at center back captaining the National Team, starting all 35 matches in which she played and setting a U.S. record for minutes played in a calendar year at 3,066 &hellip; She was the first player ever to play more than 3,000 minutes in a year &hellip; Missed some training time after recovering from surgery to remove her gall bladder in May but did not miss any game action &hellip; Started all six games at the 2008 Olympics, playing every minute, to help the USA to the gold medal &hellip; <strong>2007:</strong> Started all 20 games in which she played, playing all but 59 minutes of those games &hellip; Was the most-capped defender and second most-capped player on the 2007 Women&rsquo;s World Cup team &hellip; Started all six games of the Women&rsquo;s World Cup, her third WWC tournament, but the first time she had played in every match of the competition &hellip; <strong>2006:</strong> Made her return to the National Team and played against Norway at the Four Nations Tournament in China just 112 days after having a baby &hellip; Played in 20 games, starting 17 &hellip; <strong>2005:</strong> Took the year off to have her first child, Rylie Rampone, who was born Sept. 29 &hellip; <strong>2004:</strong> Had a stellar year for the USA, starting 26 of the 28 matches she played, including every minute of the five matches in which she appeared at the 2004 Olympics ... <strong>2003:</strong> Continued her steady play after making a complete comeback from ACL surgery, starting 15 of the 17 games in which she played &hellip; Started all four Women&rsquo;s World Cup matches in which she played, playing every minute of those games &hellip; Became the 15th U.S. player to earn 100 caps when she played against Brazil on July 13 in New Orleans &hellip; She captained the USA for the first time in that match &hellip; <strong>2002:</strong> Called into two training camps but did not play for the USA while recovering from ACL surgery &hellip; <strong>2001:</strong> Played in four matches for the USA during a limited schedule, starting two &hellip; Missed the 2001 Nike U.S. Women&rsquo;s Cup after tearing her right ACL while playing for the New York Power &hellip; <strong>2000:</strong> Was one of the USA&rsquo;s most consistent players, earning the starting spot at right back &hellip; In a breakout year, she started 30 of the 33 matches in which she played, including all five games at the Olympics and played 2,540 minutes &hellip; Scored two of her four career goals, both against Iceland on April 5, in Davidson, N.C. &hellip; <strong>1999:</strong> A member of the 1999 Women&rsquo;s World Cup championship team, she played in one match against Korea DPR ... The versatile defender played in 18 matches for the USA in 1999, starting eight ... <strong>1998:</strong> Solidified her position as a solid starter in the defense, starting 14 of her 19 matches ... Started both matches as the USA took the gold medal at the 1998 Goodwill Games ... <strong>1997:</strong> Started 16 of 18 games for the USA in 1997, her first year with the National Team, finishing third on the team in minutes played ... First trained with the USA at training camp in San Diego in January ... Traveled with the USA to Australia in February of 1997, making her debut against the Matildas on Feb. 28 in Melbourne ... Played the second half in Melbourne, then all 180 minutes of matches in Bathurst and Canberra, and her international career was off and running ... Played right midfield in all three games at Nike U.S. Cup 1997, scoring the 100th U.S. Women&rsquo;s Cup goal against Australia in Ambler, Pa. ... <strong>First Appearance:</strong> Feb. 28, 1997 vs. Australia ... <strong>First Goal:</strong> May 2, 1997 vs. Korea Republic</p>
+<p>
+</p>
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="content" id="tab-3">
+                        <div class="section">
+                            <p>
+<strong>
+</strong>
+</p>
+<p><strong></strong></p>
+<p><strong>2015:</strong> Played 962 minutes in 11 starts for Sky Blue FC and scored a goal in her ninth season or professional club soccer in the United States &hellip; <strong>2014:</strong> Played 1,165 minutes in 19 games for Sky Blue FC, starting 18 &hellip; Scored a goal and had two assists &hellip; Was named to the NWSL Best XI First Team at the age of 39 &hellip; <strong>2013:</strong> Allocated to her home state Sky Blue FC for the inaugural NWSL season and played every minute of the 20 games she started while leading the club to a playoff berth &hellip; At the age of 38, she was named to the NWSL Best XI &hellip; <strong>2011</strong>: Signed with magicJack for the 2011 WPS season and played every minute of all 11 games she played in helping the club to a playoff berth &hellip; Had one assist &hellip; <strong>2010:</strong> Played in 16 matches for Sky Blue, starting 14 &hellip; Named as a WPS All-Star Game reserve &hellip; <strong>2009:</strong> Allocated to Sky Blue in her home state of New Jersey for the inaugural WPS season in 2009 &hellip; She helped lead underdog Sky Blue to the inaugural WPS championship, taking over as head coach with two games left during what was a tumultuous regular season and leading the team to one regular season win, the final playoff berth and three dramatic road wins in the playoffs to claim the title &hellip; Missed a few games early in the WPS season due to injury but ended up starting 14 games and was a WPS All-Star, starting in the All-Star Game &hellip; Named the WPS Sportswoman of the Year &hellip; Played a key role in shutting out a powerful Los Angeles Sol attack in the 1-0 WPS title game victory, all while almost three months pregnant &hellip; <strong>2003:</strong> With the New York Power of the WUSA, started and played every minute of 18 matches, recording one assist &hellip; <strong>2002:</strong> Recovered from ACL surgery at the end of the 2001 season to play 1,699 minutes over 19 matches, all of which she started &hellip; <strong>2001:</strong> Was a founding player in the WUSA for the New York Power &hellip; Helped lead the Power to the WUSA playoffs before tearing her ACL just two minutes into the third to last match of the regular season &hellip; Started 18 matches for the Power and played every minute until her injury &hellip; <strong>1998:</strong> Played several matches for the New Jersey Stallions of the W-League during the summer of 1998 &hellip; <strong>Youth club:</strong> Played youth club with the Twin County Saints.</p>
+<p>
+</p>
+<p> </p>
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                        <div class="section">
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</div>
+
+
+
+<script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530194b53a680468&async=1"></script>
+<script type="text/javascript">window.onload = function(){addthis.init()};</script>
+
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="row">
+            <div class="large-12 column">
+                <ul class="small-block-grid-2 medium-block-grid-5 large-block-grid-5">
+                    <li>
+                        <ul class="side-nav">
+                            <li>
+                                <img src="/Content/images/us-soccer-logo.png" alt="logo" width="78" height="91">
+                            </li>
+                            <div id="footer-social">
+                                <h4 class="social-text">Follow Us</h4>
+                                <ul class="social-list-inline social-wrapper" data-fixed-inner="">
+                                        <li class="social-list-item"><a href="https://www.facebook.com/officialussoccer" target="" class="icon icon-facebook"></a></li>
+    <li class="social-list-item"><a href="http://instagram.com/ussoccer" target="" class="icon icon-instagram"></a></li>
+    <li class="social-list-item"><a href="https://twitter.com/ussoccer" target="" class="icon icon-twitter"></a></li>
+
+                                    <li class="footer-supporters-club">
+                                        <form id="formLogin" name="formLogin" method="post" target="_blank" action="/email-subscriptions">
+                                            <div class="sign-up row collapse">
+                                                <div class="small-10 columns">
+                                                    <input type="text" name="Email_Address" placeholder="Enter Email Address" value="">
+                                                </div>
+                                                <div class="small-2 columns">
+                                                    <button class="postfix icon-right" type="submit"></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+            <li><a href="http://www.ussoccermembership.com" target="_blank">Membership</a>
+
+        </li>
+        <li><a href="http://developmentfund.ussoccer.com" target="_blank">Development Fund</a>
+
+        </li>
+        <li><a href="https://www.safesoccer.com/" target="">Safe Soccer</a>
+
+        </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="side-nav">
+            <li><a href="/mens-national-team" target="">MNT</a>
+
+    <ul>
+            <li><a href="/mens-national-team/latest-roster" target="">Latest Roster</a>
+            
+
+                </li>
+            <li><a href="/mens-national-team/schedule-tickets" target="">Schedule &amp; Tickets</a>
+            
+
+                </li>
+            <li><a href="/mens-national-team/results-statistics" target="">Results</a>
+            
+
+                </li>
+            <li><a href="/mens-national-team/mnt-stats" target="">Stats</a>
+            
+
+                </li>
+            <li><a href="/mens-national-team/tournaments" target="">Tournaments</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/womens-national-team" target="">WNT</a>
+
+    <ul>
+            <li><a href="/womens-national-team/latest-roster" target="">Latest Roster</a>
+            
+
+                </li>
+            <li><a href="/womens-national-team/schedule-tickets" target="">Schedule &amp; Tickets</a>
+            
+
+                </li>
+            <li><a href="/womens-national-team/results-statistics" target="">Results</a>
+            
+
+                </li>
+            <li><a href="/womens-national-team/stats" target="">Stats</a>
+            
+
+                </li>
+            <li><a href="/womens-national-team/tournaments" target="">Tournaments</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/schedule-tickets" target="Custom">Tickets</a>
+
+    <ul>
+            <li><a href="https://oss.ticketmaster.com/aps/ussoccer/EN/account/login " target="_blank">Account Manager</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/about/sponsors" target="">Sponsors &amp; Corporate Partners</a>
+
+        </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="side-nav">
+            <li><a href="/youth-national-team" target="">YNT</a>
+
+    <ul>
+            <li><a href="/us-under23-mens-national-team/about-the-team" target="">U-23 MNT</a>
+            
+
+                </li>
+            <li><a href="/us-under23-womens-national-team/about-the-team" target="">U-23 WNT</a>
+            
+
+                </li>
+            <li><a href="/us-under20-mens-national-team/about-the-team" target="">U-20 MNT</a>
+            
+
+                </li>
+            <li><a href="/us-under20-womens-national-team/about-the-team" target="">U-20 WNT</a>
+            
+
+                </li>
+            <li><a href="/us-under19-mens-national-team/about-the-team" target="Custom">U-19 MNT</a>
+            
+
+                </li>
+            <li><a href="/us-under19-womens-national-team/about-the-u19-womens-national-team" target="Custom">U-19 WNT</a>
+            
+
+                </li>
+            <li><a href="/us-under18-mens-national-team/about-the-team" target="">U-18 MNT</a>
+            
+
+                </li>
+            <li><a href="/us-under18-womens-national-team/about-the-team" target="">U-18 WNT</a>
+            
+
+                </li>
+            <li><a href="/us-under17-mens-national-team/about-the-team" target="">U-17 MNT</a>
+            
+
+                </li>
+            <li><a href="/us-under17-womens-national-team/about-the-team" target="">U-17 WNT</a>
+            
+
+                </li>
+            <li><a href="/us-under16-boys-national-team/about-the-team" target="Custom">U-16 Boys</a>
+            
+
+                </li>
+            <li><a href="/us-under16-girls-national-team/about-the-u16-girls-national-team" target="Custom">U-16 Girls</a>
+            
+
+                </li>
+            <li><a href="/us-under15-boys-national-team/about-the-team" target="">U-15 Boys</a>
+            
+
+                </li>
+            <li><a href="/us-under15-girls-national-team/about-the-team" target="">U-15 Girls</a>
+            
+
+                </li>
+            <li><a href="/us-under14-national-development-program" target="">U-14 NDP</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/beach-soccer-national-team/about-beach-soccer" target="">Beach Soccer</a>
+
+        </li>
+        <li><a href="/futsal-national-team/futsal" target="">Futsal</a>
+
+        </li>
+        <li><a href="/paralympic-national-team/about-the-pnt" target="">Paralympic Soccer</a>
+
+        </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="side-nav">
+            <li><a href="/talent-identification-scouting" target="Custom">Talent Identification</a>
+
+    <ul>
+            <li><a href="" target="Custom">YNT Identification Centers</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="http://www.ussoccerda.com/" target="">Development Academy</a>
+
+    <ul>
+            <li><a href="http://www.ussoccerda.com/all-clubs" target="">Clubs</a>
+            
+
+                </li>
+            <li><a href="http://www.ussoccerda.com/overview" target="">Overview</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/lamar-hunt-us-open-cup" target="">Lamar Hunt U.S. Open Cup</a>
+
+        </li>
+        <li><a href="/referees" target="">Referee Program</a>
+
+    <ul>
+            <li><a href="/referees/laws-of-the-game" target="">Laws of the Game</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/coaching-education" target="">Coaching Education</a>
+
+    <ul>
+            <li><a href="/coaching-education/licenses" target="">Licenses</a>
+            
+
+                </li>
+            <li><a href="" target="">National Coaching Schools</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/about/us-soccer-media-services" target="Active Browser">Media Services</a>
+
+    <ul>
+            <li><a href="/about/us-soccer-media-services/credentials" target="">Credentials</a>
+            
+
+                </li>
+    </ul>
+        </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="side-nav">
+            <li><a href="/about/about-us-soccer" target="">About U.S. Soccer</a>
+
+    <ul>
+            <li><a href="/about/affiliates" target="">Affiliates</a>
+            
+
+                </li>
+            <li><a href="/about/federation-services" target="">Federation Services</a>
+            
+
+                </li>
+            <li><a href="/about/governance" target="">Governance</a>
+            
+
+                </li>
+            <li><a href="/about/federation-services/international-games" target="">International Games</a>
+            
+
+                </li>
+            <li><a href="http://www.recognizetorecover.org/#us-soccers-comprehensive-player-health-and-safety-program" target="">Recognize to Recover</a>
+            
+
+                </li>
+            <li><a href="/integrity-hotline" target="Custom">Integrity Hotline</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/about/history" target="">History</a>
+
+    <ul>
+            <li><a href="/about/national-soccer-hall-of-fame" target="">National Soccer Hall of Fame</a>
+            
+
+                </li>
+    </ul>
+        </li>
+        <li><a href="/about/about-us-soccer/jobs-at-us-soccer" target="">Jobs</a>
+
+    <ul>
+            <li><a href="/about/about-us-soccer/jobs-at-us-soccer" target="">Current Job Openings</a>
+            
+
+                </li>
+            <li><a href="https://www.linkedin.com/company/united-states-soccer-federation" target="_blank">LinkedIn</a>
+            
+
+                </li>
+    </ul>
+        </li>
+
+
+                        </ul>
+                        <p class="powered-by">
+                            Website powered by
+                            <br />
+                            <img src="/Content/images/sitecore-logo.png" alt="SiteCore" width="102" height="28" />
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row footer-inline-links">
+            <div class="large-12 column">
+                <ul class="inline-list">
+                    <li>Copyright U.S. Soccer 2019</li>
+                    <li>All Rights Reserved</li>
+                    <li><a href="/terms-of-use">Terms of Use</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="video-overlay" class="reveal-modal medium" data-reveal>
+        <div class="video-target" style="height: inherit;">
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <noscript>
+        <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6036539&cv=2.0&cj=1" />
+    </noscript>
+        <div><script src="/Content/js/jQuery?v=M6dmVkrHVhoZ1gfOtvVDZbgBcQTsbWxoLsRizcGkbPk1"></script>
+</div>
+    <script src="/Content/js/bundle?v=4mlluQUK9kp9q5kW7g6pPRW_gVyc_urSoscovd2drTU1"></script>
+
+    <script src="/Content/js/ussoccer?v=hbJ7tETYc6YRZwrnp8okv8b5vMvj1H8mnte9D3Rzrsc1"></script>
+
+    <script src="/Content/js/gallery.js?v=1RSixetLMEfpMQ08uIIOd-RqsmZck7Y-ddFQUpPuaiM1"></script>
+
+    
+<input id="MediaFramework_ItemId" name="MediaFramework_ItemId" type="hidden" value="8412A9E0236048CCA789467BE8671BA9">
+</body>
+</html>
+
