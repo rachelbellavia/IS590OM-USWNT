@@ -1,0 +1,125 @@
+{
+    "censusplace.csv": {
+        "file_metadata": {
+            "filename": "/Users/Furiosa/Documents/GitHub/IS590OM-USWNT/Census/censusplace.csv",
+            "size": 3224088,
+            "last_access": "2019-03-31 16:40:51",
+            "last_modified": "2019-03-31 16:31:58"
+        },
+        "csv_basic": {
+            "num_rows": 29514,
+            "num_columns": 12,
+            "missing": ""
+        },
+        "columns": {
+            "Geo_NAME": {
+                "unique_values": "24361 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "0%",
+                "min_digit": "no digits",
+                "max_digit": "no digits"
+            },
+            "Geo_QName": {
+                "unique_values": "29445 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "0%",
+                "min_digit": "no digits",
+                "max_digit": "no digits"
+            },
+            "Geo_AREALAND": {
+                "unique_values": "29495 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 13088.0,
+                "max_digit": 7434143788.0
+            },
+            "Geo_AREAWATR": {
+                "unique_values": "16498 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 0.0,
+                "max_digit": 5027287905.0
+            },
+            "Geo_SUMLEV": {
+                "unique_values": "1 (this includes missing values)",
+                "unique_value_content": "The values are:\n\t* 160",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 160.0,
+                "max_digit": 160.0
+            },
+            "Geo_GEOCOMP": {
+                "unique_values": "1 (this includes missing values)",
+                "unique_value_content": "The values are:\n\t* 00",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 0.0,
+                "max_digit": 0.0
+            },
+            "Geo_REGION": {
+                "unique_values": "5 (this includes missing values)",
+                "unique_value_content": "The values are:\n\t* 1\n\t* 2\n\t* 3\n\t* 4\n\t* 9",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 1.0,
+                "max_digit": 9.0
+            },
+            "Geo_DIVISION": {
+                "unique_values": "10 (this includes missing values)",
+                "unique_value_content": "The values are:\n\t* 0\n\t* 1\n\t* 2\n\t* 3\n\t* 4\n\t* 5\n\t* 6\n\t* 7\n\t* 8\n\t* 9",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 0.0,
+                "max_digit": 9.0
+            },
+            "Geo_FIPS": {
+                "unique_values": "29514 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 100100.0,
+                "max_digit": 7288121.0
+            },
+            "Geo_STATE": {
+                "unique_values": "52 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 1.0,
+                "max_digit": 72.0
+            },
+            "Geo_PLACE": {
+                "unique_values": "19479 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 65.0,
+                "max_digit": 89760.0
+            },
+            "SE_T001_001": {
+                "unique_values": "9858 (this includes missing values)",
+                "unique_value_content": "Not reported (More than 10 unique values)",
+                "missing": 0,
+                "percent_missing": "0%",
+                "percent_digit": "100%",
+                "min_digit": 0.0,
+                "max_digit": 8175133.0
+            }
+        }
+    }
+}
