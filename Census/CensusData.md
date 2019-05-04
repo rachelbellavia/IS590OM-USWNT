@@ -1,14 +1,8 @@
 # Census Data
 
-## Data Cleaning Assessment
+## Data Cleaning
 
-The data itself is fairly clean, since most things are represented in specified codes. The biggest issue is that there is a lot of data, and I do not need all of it.
-
-In order to connect this data to player hometowns, I will need to find some way to match the two. The biggest concern is that in this Census data, the incorporated title of the place is included in its name, i.e. "Menlo Park city, California". These will need to be removed or otherwise avoided while trying to connect by hometown.
-
-The other problem is that at least two players are from a location that does not qualify as a place on the census. While I can still identify some basic region data for them according to the state, I cannot pull in population data from this dataset.
-
-Overall I expect this process to take up the biggest chunk of the work I have left to do on this project, trying to make it mesh with the other, hand-curated data.
+No cleaning was performed on this data.
 
 ## Authorship
 

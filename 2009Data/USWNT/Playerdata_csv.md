@@ -13,15 +13,15 @@ Since player hometowns as listed on the U.S. Soccer website include non-standard
 
 All content was gathered from the [U.S. Soccer] (https://ussoccer.com) website. Copyrighted content belongs solely to U.S. soccer.
 
-The roster list for 2018 was taken from the [U.S. Soccer Stats Page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). This page presents stats for each player who appeared in a game for the USWNT in a given year.
+The roster list for 2009 was taken from the [U.S. Soccer Stats Page](https://www.ussoccer.com/womens-national-team/stats/2009-statistics). This page presents stats for each player who appeared in a game for the USWNT in a given year.
 
 Biographical data for each player was taken from their bio page on the U.S. Soccer website. An example biography page can be seen [here for Megan Rapinoe](https://www.ussoccer.com/players/r/megan-rapinoe).
 
 ## Semantic Contents
 
-This file contains basic biographical content for each player who appeared in a game for the U.S. Women's National Team in 2018. This data is used to identify players and identify commonalities or trends among players.  
+This file contains basic biographical content for each player who appeared in a game for the U.S. Women's National Team in 2009. This data is used to identify players and identify commonalities or trends among players.  
 
-Data was originally collected in January 2019.
+Data was originally collected in May 2019.
 
 ## Collection Process
 
@@ -33,7 +33,7 @@ Tools used:
 * Lxml  
 * Xpath
 
-A list of player names was pulled from the [2018 stats page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). Xpath was used in order to isolate player names. I then used these names to build links to each player's biographical website on the [U.S. Soccer] (https://ussoccer.com) website.
+A list of player names was pulled from the [2009 stats page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). Xpath was used in order to isolate player names. I then used these names to build links to each player's biographical website on the [U.S. Soccer] (https://ussoccer.com) website.
 
 Example player url: <https://www.ussoccer.com/players/r/megan-rapinoe>
 
@@ -44,7 +44,7 @@ After downloading the HTML for each player bio, I again used xpath to isolate th
 Data is stored in csv format, with each row representing an individual player.
 
 * Number of columns: 9
-* Number of rows: 38
+* Number of rows: 29
 
 Data for each player:
 
@@ -108,5 +108,3 @@ Hometowns are listed in 'City, State' format. Non-postal code abbreviations are 
 ### Club
 
 This column represents the club team the individual plays for when not with the U.S. Women's National Team.
-
-One player does not have a club team identified. This value is represented as "NoClub".
