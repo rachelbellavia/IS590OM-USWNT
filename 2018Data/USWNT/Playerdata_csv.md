@@ -4,14 +4,14 @@
 
 No manual cleaning was performed on this file. All data was compiled by web scraping from the U.S. Soccer website. Any missing data or errors are original to the website.
 
-Some code was used to work within the parameters of the data as provided on the U.S. Soccer website. Manual exemptions were used while scraping in order to accomodate name changes or misspellings. [ussoccer.inypb]
+Some code was used to work within the parameters of the data as provided on the U.S. Soccer website. Manual exemptions were used while scraping in order to accomodate name changes or misspellings. [ussoccer.ipynb](https://github.com/rachelbellavia/IS590OM-USWNT/blob/master/2018Data/ussoccer.ipynb)
 
-Since player hometowns as listed on the U.S. Soccer website include non-standardized abbreviations of states, a dictionary was manually created in order to connect these abbreviations to the full name of states in order to connect them with U.S. Census data. [USWNTcode.inypb]
+Since player hometowns as listed on the U.S. Soccer website include non-standardized abbreviations of states, a dictionary was manually created in order to connect these abbreviations to the full name of states in order to connect them with U.S. Census data. [USWNTcode.ipynb](https://github.com/rachelbellavia/IS590OM-USWNT/blob/master/USWNTCode.ipynb)
 
 
 ## Authorship
 
-All content was gathered from the [U.S. Soccer] (https://ussoccer.com) website. Copyrighted content belongs solely to U.S. soccer.
+All content was gathered from the [U.S. Soccer](https://ussoccer.com) website. Copyrighted content belongs solely to U.S. soccer.
 
 The roster list for 2018 was taken from the [U.S. Soccer Stats Page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). This page presents stats for each player who appeared in a game for the USWNT in a given year.
 
@@ -33,7 +33,7 @@ Tools used:
 * Lxml  
 * Xpath
 
-A list of player names was pulled from the [2018 stats page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). Xpath was used in order to isolate player names. I then used these names to build links to each player's biographical website on the [U.S. Soccer] (https://ussoccer.com) website.
+A list of player names was pulled from the [2018 stats page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). Xpath was used in order to isolate player names. I then used these names to build links to each player's biographical website on the [U.S. Soccer](https://ussoccer.com) website.
 
 Example player url: <https://www.ussoccer.com/players/r/megan-rapinoe>
 
@@ -68,7 +68,7 @@ This column identifies the roster year on which the player appeared. Since playe
 
 ### Filename
 
-This column identifies the name and location for the HTML file for the player's biography page on the [U.S. Soccer] (https://ussoccer.com) website.
+This column identifies the name and location for the HTML file for the player's biography page on the [U.S. Soccer](https://ussoccer.com) website.
 
 ### Firstname
 
