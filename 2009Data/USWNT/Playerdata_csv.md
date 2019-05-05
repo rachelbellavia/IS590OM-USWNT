@@ -4,9 +4,9 @@
 
 No manual cleaning was performed on this file. All data was compiled by web scraping from the U.S. Soccer website. Any missing data or errors are original to the website.
 
-Some code was used to work within the parameters of the data as provided on the U.S. Soccer website. Manual exemptions were used while scraping in order to accomodate name changes or misspellings. [ussoccer.inypb]
+Some code was used to work within the parameters of the data as provided on the U.S. Soccer website. Manual exemptions were used while scraping in order to accomodate name changes or misspellings. [ussoccer.inypb](https://github.com/rachelbellavia/IS590OM-USWNT/blob/master/2009Data/ussoccer.ipynb)
 
-Since player hometowns as listed on the U.S. Soccer website include non-standardized abbreviations of states, a dictionary was manually created in order to connect these abbreviations to the full name of states in order to connect them with U.S. Census data. [USWNTcode.inypb]
+Since player hometowns as listed on the U.S. Soccer website include non-standardized abbreviations of states, a dictionary was manually created in order to connect these abbreviations to the full name of states in order to connect them with U.S. Census data. [USWNTcode.inypb](https://github.com/rachelbellavia/IS590OM-USWNT/blob/master/USWNTCode.ipynb)
 
 
 ## Authorship
