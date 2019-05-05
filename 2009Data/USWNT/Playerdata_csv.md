@@ -33,7 +33,7 @@ Tools used:
 * Lxml  
 * Xpath
 
-A list of player names was pulled from the [2009 stats page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). Xpath was used in order to isolate player names. I then used these names to build links to each player's biographical website on the [U.S. Soccer] (https://ussoccer.com) website.
+A list of player names was pulled from the [2009 stats page](https://www.ussoccer.com/womens-national-team/stats/2018-statistics). Xpath was used in order to isolate player names. I then used these names to build links to each player's biographical website on the [U.S. Soccer](https://ussoccer.com) website.
 
 Example player url: <https://www.ussoccer.com/players/r/megan-rapinoe>
 
