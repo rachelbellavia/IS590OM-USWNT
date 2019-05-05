@@ -11,7 +11,7 @@ Since player hometowns as listed on the U.S. Soccer website include non-standard
 
 ## Authorship
 
-All content was gathered from the [U.S. Soccer] (https://ussoccer.com) website. Copyrighted content belongs solely to U.S. soccer.
+All content was gathered from the [U.S. Soccer](https://ussoccer.com) website. Copyrighted content belongs solely to U.S. soccer.
 
 The roster list for 2009 was taken from the [U.S. Soccer Stats Page](https://www.ussoccer.com/womens-national-team/stats/2009-statistics). This page presents stats for each player who appeared in a game for the USWNT in a given year.
 
