@@ -68,7 +68,7 @@ This column identifies the roster year on which the player appeared. Since playe
 
 ### Filename
 
-This column identifies the name and location for the HTML file for the player's biography page on the [U.S. Soccer] (https://ussoccer.com) website.
+This column identifies the name and location for the HTML file for the player's biography page on the [U.S. Soccer](https://ussoccer.com) website.
 
 ### Firstname
 
